@@ -37,7 +37,7 @@ export default function PostShow() {
   //console.log('formData',formData);
 
 
-  const [priceTotal, setPriceTotal] = useState('1');
+  const [priceTotal, setPriceTotal] = useState('0');
 
   
 
@@ -60,7 +60,7 @@ export default function PostShow() {
       };
   
       // Update priceTotal based on 'premium'
-      setPriceTotal(updatedData.premium === "true" ? '2' : '1');
+      setPriceTotal(updatedData.premium === "true" ? '2' : '0');
   
       return updatedData;
     });
