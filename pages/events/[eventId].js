@@ -44,7 +44,7 @@ const EventDetail = () => {
         const event = data.find(event => event.uuid_column === eventId);
         if (event) {
           setEventData(event);
-          console.log('Event data:', event);
+          //console.log('Event data:', event);
         } else {
           console.error('Event not found');
         }
