@@ -72,7 +72,7 @@ const EventDetail = () => {
     <Layout>
             <Head>
         <title>HTX Shows</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Browse Shows in Houston, Texas." />
         <meta name="keywords" content="keyword1, keyword2, keyword3" />
         <script type="application/ld+json">
     {`
@@ -80,7 +80,7 @@ const EventDetail = () => {
         "@context": "http://schema.org",
         "@type": "WebPage",
         "name": "HTX Shows",
-        "description": "Explore Houston's vibrant entertainment scene with our comprehensive shows listing board. Discover the latest concerts, theater performances, art exhibitions, and cultural events happening across the city. Stay informed and entertained with up-to-date schedules, ticket information, and insider tips on must-see shows in Houston."
+        "description": {"Explore Houston's vibrant entertainment scene with our comprehensive shows listing board. Discover the latest concerts, theater performances, art exhibitions, and cultural events happening across the city. Stay informed and entertained with up-to-date schedules, ticket information, and insider tips on must-see shows in Houston."}
       }
     `}
   </script>
@@ -102,9 +102,9 @@ const EventDetail = () => {
 
             <div className='mainDetails'>
               
-              <h2>Venue: {eventData.venue}</h2>
-              <h2>Date: {eventData.month} / {eventData.day} / {eventData.year}</h2>
-              <h2>Time: {eventData.hour}:{eventData.minute.toString().padStart(2, '0')} {eventData.ampm}</h2>
+              <h2><span className='pink'>Venue:</span> {eventData.venue}</h2>
+              <h2><span className='pink'>Date:</span> {eventData.month} / {eventData.day} / {eventData.year}</h2>
+              <h2><span className='pink'>Time:</span> {eventData.hour}:{eventData.minute.toString().padStart(2, '0')} {eventData.ampm}</h2>
               <p>Age Restrictions: {eventData.age_restrictions}</p>
               
             {eventData.genre && (

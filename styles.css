@@ -25,6 +25,8 @@ body a {
   color: #FA2FB5;
 }
 
+.pink{color: #FA2FB5;}
+
 body::after {
   content: "";
   position: absolute;
