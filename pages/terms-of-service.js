@@ -29,7 +29,7 @@ const TermsOfService = () => (
     </ul>
 
     <h2>4. Disclaimer of Warranties</h2>
-    <p>HTXShows is provided on an 'as is' and 'as available' basis. We make no warranties or representations about the accuracy or completeness of the content on the website and assume no liability or responsibility for any errors or omissions in the content.</p>
+    <p>HTXShows is provided on an as-is and as-available basis. We make no warranties or representations about the accuracy or completeness of the content on the website and assume no liability or responsibility for any errors or omissions in the content.</p>
     <p>HTXSHOWS reserves the right to revoke submissions at its discretion.</p>
 
     <h2>5. Limitation of Liability</h2>
