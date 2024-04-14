@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav>
       <Link href="/">
       <div className="logo">
-        <h1 className="glow">HTXSHOWS</h1>
+        <h1 className="glow">HTX SHOWS</h1>
         <p>Houstons Premier Platform for Show Listings</p>
       </div>
       </Link>

@@ -2,11 +2,15 @@ import Stripe from "stripe";
 import { v4 as uuidv4 } from 'uuid'; // Import the UUID library
 import { supabase } from '../../lib/supabase';
 
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
+const stripe = new Stripe(process.env.NEXT_PUBLIC_TEST_STRIPE_SECRET_KEY);
 const host = 'https://www.htxshows.com'
 
 export default async function handler(req, res) {
   const { method, body } = req;
+  const { formDataForSubmission } = body;
+  const { eventTitle, contactName, contactEmail, bands, genre, detailsLink, venue, month, day, year, hour, minute, ampm, charge, price, ageRestrictions, premium, spotify, appleMusic, instagram, facebook, x, description } = formDataForSubmission;
+
+
   if (method === "POST") {
     try {
       const date = new Date().toISOString();
@@ -36,10 +40,7 @@ export default async function handler(req, res) {
 
       res.status(200).json({ sessionId: session.id });
 
-      // Insert form data into the shows table if the response is successful
-      const { formDataForSubmission } = body;
 
-      const { eventTitle, contactName, contactEmail, bands, genre, detailsLink, venue, month, day, year, hour, minute, ampm, charge, price, ageRestrictions, premium, spotify, appleMusic, instagram, facebook, x, description } = formDataForSubmission;
 
       // Insert the UUID into the shows table along with the rest of the data
       const { data, error } = await supabase.from('shows').insert([
