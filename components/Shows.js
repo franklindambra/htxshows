@@ -5,12 +5,17 @@ import SEOcontent from './SEOcontent';
 import { supabase } from '../lib/supabase'
 
 const Shows = () => {
+  
   const [shows, setShows] = useState([]);
+
   const [selectedGenre, setSelectedGenre] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [selectedCharge, setSelectedCharge] = useState(null);
   const [loading, setLoading] = useState(true); // Add loading state
+
   const today = new Date();
+today.setHours(0, 0, 0, 0);
+
 
   useEffect(() => {
     const fetchShows = async () => {
@@ -30,8 +35,16 @@ const Shows = () => {
     fetchShows();
   }, []);
 
+
+
+
+
+
   const middleColumnShows = shows.filter((show) => {
+    
+    
     const showDate = new Date(show.year, show.month - 1, show.day);
+    
     return (
       (!selectedGenre || show.genre === selectedGenre) &&
       (!selectedTime || show.ampm === selectedTime) &&
@@ -68,6 +81,15 @@ const Shows = () => {
     const dateB = new Date(b);
     return dateA - dateB;
   });
+
+
+
+
+
+
+
+
+  
 
   return (
 
