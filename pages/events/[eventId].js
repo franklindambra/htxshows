@@ -69,23 +69,8 @@ const EventDetail = () => {
   };
 
   return (
-    <Layout>
-            <Head>
-        <title>HTX Shows</title>
-        <meta name="description" content="Browse Shows in Houston, Texas." />
-        <meta name="keywords" content="keyword1, keyword2, keyword3" />
-        <script type="application/ld+json">
-    {`
-      {
-        "@context": "http://schema.org",
-        "@type": "WebPage",
-        "name": "HTX Shows",
-        "description": {"Explore Houston's vibrant entertainment scene with our comprehensive shows listing board. Discover the latest concerts, theater performances, art exhibitions, and cultural events happening across the city. Stay informed and entertained with up-to-date schedules, ticket information, and insider tips on must-see shows in Houston."}
-      }
-    `}
-  </script>
 
-      </Head>
+
 
 
       
@@ -167,7 +152,7 @@ const EventDetail = () => {
           </>
         )}
       </div>
-    </Layout>
+
   );
 };
 

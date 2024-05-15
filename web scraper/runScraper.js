@@ -35,7 +35,7 @@ async function runScraper() {
             contactEmail: "",
             bands: show.title,
             genre: "",
-            detailsLink: "",
+            detailsLink: show.url,
             venue: show.venue,
             month: show.month,
             day: show.monthDate,
