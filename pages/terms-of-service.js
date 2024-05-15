@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 
 const TermsOfService = () => (
-  <Layout>
+<>
 <Head>
   <title>Terms of Service - HTXShows</title>
 </Head>
@@ -43,9 +43,9 @@ const TermsOfService = () => (
 
 
 </div>
+</>
 
-
-  </Layout>
+ 
   
   
 

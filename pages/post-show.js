@@ -70,7 +70,7 @@ export default function PostShow() {
 
   return (
 
-    <Layout>
+ <>
             <Head>
         <title>HTX Shows - Post a Show</title>
         <meta name="description" content="Post your show for free to Houston's only central shows listings board." />
@@ -92,6 +92,6 @@ export default function PostShow() {
         <PostShowForm setPriceTotal={setPriceTotal} handleChange={handleChange} handleSubmit={handleSubmit} formData={formData}></PostShowForm></div>
       <div className='right'><Checkout priceTotal={priceTotal} formData={formData}></Checkout></div>
 
-    </div></Layout>
+    </div></>
   );
 }
