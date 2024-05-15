@@ -2,7 +2,7 @@ import Stripe from "stripe";
 import { v4 as uuidv4 } from 'uuid'; // Import the UUID library
 import { supabase } from '../../lib/supabase';
 
-const stripe = new Stripe(process.env.NEXT_PUBLIC_TEST_STRIPE_SECRET_KEY);
+const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 const host = 'https://www.htxshows.com'
 
 export default async function handler(req, res) {
