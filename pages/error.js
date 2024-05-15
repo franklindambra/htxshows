@@ -1,7 +1,7 @@
 // pages/_error.js
 
 import React from 'react';
-import Layout from '@/components/Layout';
+import Layout from '@/layouts/Layout';
 
 const ErrorPage = () => {
   return (

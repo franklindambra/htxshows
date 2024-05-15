@@ -1,5 +1,5 @@
 
-import Layout from '@/components/Layout';
+import Layout from '@/layouts/Layout';
 import Shows from '../components/Shows';
 
 export const metadata = {

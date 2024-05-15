@@ -1,7 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import Layout from '../components/Layout.js';
+import Layout from '../layouts/Layout.js';
 
 class MyApp extends App {
   render() {

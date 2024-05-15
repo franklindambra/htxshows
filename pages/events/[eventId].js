@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import Layout from '@/components/Layout';
+import Layout from '@/layouts/Layout';
 import Head from 'next/head';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

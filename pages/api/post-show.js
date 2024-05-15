@@ -44,7 +44,7 @@ export default async function handler(req, res) {
 
             if (error) {
                 console.error("Error inserting show:", error.message);
-                return res.status(500).json({ error: "Internal Server Error" });
+                return res.status(500).json({ error: "Error" });
             }
 
             console.log('data posted succesfully', data);
@@ -63,4 +63,3 @@ export default async function handler(req, res) {
         res.status(405).json({ error: "Method Not Allowed" });
     }
 }
-

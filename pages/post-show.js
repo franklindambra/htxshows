@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import PostShowForm from '../components/PostShowForm';
 import Checkout from '../components/Checkout';
-import Layout from '@/components/Layout';
+import Layout from '@/layouts/Layout';
 import Head from 'next/head';
 
 

@@ -1,7 +1,7 @@
 // pages/terms-of-service.js
 
 import Head from 'next/head';
-import Layout from '@/components/Layout';
+import Layout from '@/layouts/Layout';
 
 const TermsOfService = () => (
 <>
