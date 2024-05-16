@@ -28,12 +28,6 @@ export default function sitemap() {
       lastModified: e.modified_at,
       changeFrequency: "daily",
       priority: 0.8
-    })),
-    ...categorySlugs.map(e => ({
-      url: `https://www.htxshows.com/category/${e}`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.7
     }))
   ];
 
