@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import PostShowForm from '../components/PostShowForm';
 import Checkout from '../components/Checkout';
-import Layout from '@/layouts/Layout';
 import Head from 'next/head';
 
 
@@ -71,22 +70,24 @@ export default function PostShow() {
   return (
 
  <>
-            <Head>
-        <title>HTX Shows - Post a Show</title>
-        <meta name="description" content="Post your show for free to Houston's only central shows listings board." />
-        <meta name="keywords" content="keyword1, keyword2, keyword3" />
-        <script type="application/ld+json">
-    {`
-      {
-        "@context": "http://schema.org",
-        "@type": "WebPage",
-        "name": "HTX Shows - Post a Houston Show",
-        "description": "Post a Houston show."
-      }
-    `}
-  </script>
+<Head>
+  <title>Post a Show - HTX Shows</title>
+  <meta name="description" content="Post your upcoming show on HTX Shows and reach a wider audience in Houston, Texas." />
+  <meta name="keywords" content="Houston, shows, events, music, post a show" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charSet="utf-8" />
 
-      </Head>
+  <meta property="og:site_name" content="HTX Shows" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Post a Show - HTX Shows" />
+  <meta property="og:description" content="Post your upcoming show on HTX Shows and reach a wider audience in Houston, Texas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.htxshows.com/post-show" />
+  <meta property="og:image" content="https://www.htxshows.com/bgresized.jpg" />
+  <meta property="og:image:alt" content="HTX Shows - Post a Show" />
+</Head>
+
       <div className="post-show-container">
       <div className='left'>
         <PostShowForm setPriceTotal={setPriceTotal} handleChange={handleChange} handleSubmit={handleSubmit} formData={formData}></PostShowForm></div>

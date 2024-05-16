@@ -165,7 +165,6 @@ today.setHours(0, 0, 0, 0);
                   <p className="listDetail"><b>Venue:</b> {show.venue}</p>
                   <p className="listDetail"><b>Cover:</b> {show.charge}</p>
                   <p className="listDetail"><b>Genre:</b> {show.genre}</p>
-                  <p style={{ display: 'block', marginTop: '15px' }}>Click to Read More ...</p>
                 </div>
 
               </Link>

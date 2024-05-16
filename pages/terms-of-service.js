@@ -1,13 +1,27 @@
 // pages/terms-of-service.js
 
 import Head from 'next/head';
-import Layout from '@/layouts/Layout';
 
 const TermsOfService = () => (
 <>
 <Head>
-  <title>Terms of Service - HTXShows</title>
+  <title>Terms of Service - HTX Shows</title>
+  <meta name="description" content="Read HTX Shows' terms of service to understand the rules and guidelines for using our platform." />
+  <meta name="keywords" content="terms of service, HTX Shows, guidelines, rules, platform" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charSet="utf-8" />
+
+  <meta property="og:site_name" content="HTX Shows" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Terms of Service - HTX Shows" />
+  <meta property="og:description" content="Read HTX Shows' terms of service to understand the rules and guidelines for using our platform." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.htxshows.com/terms-of-service" />
+  <meta property="og:image" content="https://www.htxshows.com/bgresized.jpg" />
+  <meta property="og:image:alt" content="HTX Shows - Terms of Service" />
 </Head>
+
 <div className='eventContainer'>
 
   <h1>Terms of Service</h1>
