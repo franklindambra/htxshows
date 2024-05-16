@@ -22,13 +22,7 @@ export default function sitemap() {
   ];
 
   const sitemap = [
-    ...defaultPages,
-    ...postSlugs.map(e => ({
-      url: `https://www.htxshows.com/events/${e.slug}`,
-      lastModified: e.modified_at,
-      changeFrequency: "daily",
-      priority: 0.8
-    }))
+    ...defaultPages
   ];
 
   return sitemap;
