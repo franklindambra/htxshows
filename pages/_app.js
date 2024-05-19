@@ -2,6 +2,7 @@ import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
 import Layout from '../layouts/Layout.js';
+import { GoogleTagManager } from '@next/third-parties/google'
 
 class MyApp extends App {
   render() {
@@ -9,7 +10,7 @@ class MyApp extends App {
     return (
       <>
         <Head>
-          {/* Add meta tags, title, and other head elements here */}
+          
         </Head>
         <Layout>
           <Component {...pageProps} />

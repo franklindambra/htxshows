@@ -2,10 +2,14 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles.css';
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export default function Layout({ children }) {
   return (
 
+  <div>
+      <GoogleTagManager gtmId="GTM-M3V57XTR" />
+      <div>
 
         <div className="background-container">
           <Navbar />
@@ -27,6 +31,9 @@ export default function Layout({ children }) {
 
           </main>
           <Footer />
+        </div>
+        </div>
+
         </div>
 
 
