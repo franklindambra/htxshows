@@ -10,7 +10,7 @@ export default async function handler(req, res) {
         try {
             const { formDataForSubmission } = body;
 
-            const { eventTitle, contactName, contactEmail, bands, genre, detailsLink, venue, month, day, year, hour, minute, ampm, charge, price, ageRestrictions, premium, spotify, appleMusic, instagram, facebook, x, description } = formDataForSubmission;
+            const { eventTitle, contactName, contactEmail, bands, genre, detailsLink, venue, month, day, year, hour, minute, ampm, charge, price, ageRestrictions, premium, spotify, appleMusic, instagram, facebook, x, description, image } = formDataForSubmission;
 
 
             const { data, error } = await supabase.from('shows').insert([
@@ -38,7 +38,8 @@ export default async function handler(req, res) {
                         facebook: facebook,
                         x: x,
                         description: description,
-                        uuid_column: uuid
+                        uuid_column: uuid,
+                        image: image
                     }
                 ]).select();
 

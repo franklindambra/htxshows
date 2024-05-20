@@ -25,6 +25,8 @@ async function scrapeShowListings() {
 
         $('.tw-section').each((index, element) => {
             const venue = "White Oak Music Hall";
+            
+            
             const anchorElement = $(element).find('.tw-name a');
             const url = anchorElement.attr('href'); // Get the href of the anchor tag
 
@@ -36,8 +38,12 @@ async function scrapeShowListings() {
             
             const monthDate = $(element).find('.tw-event-date-complete .tw-event-date').text().trim();
             const year = currentYear;
+
+            const imageElement = $(element).find('.tw-image img');
+            const imageUrl = imageElement.attr('src');
+
         
-            showListings.push({ venue, url, title, month, monthDate, year }); // Convert month to string
+            showListings.push({ venue, url, title, month, monthDate, year, imageUrl }); // Convert month to string
         });
         
         

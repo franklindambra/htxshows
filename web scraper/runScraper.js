@@ -53,8 +53,11 @@ async function runScraper() {
             facebook: "",
             x: "",
             description: "",
+            image:show.imageUrl
         };
 
+
+        //postObject(formDataForSubmission);
         //console.log(formDataForSubmission);
 
         // Post the formDataForSubmission to the API
@@ -85,7 +88,7 @@ async function runScraper() {
             x: "https://www.test.com",
             description: "my description",
         };*/
-        postObject(formDataForSubmission);
+        
 
         // Add a delay between requests to avoid rate issues
     //await new Promise(resolve => setTimeout(resolve, delayBetweenRequests));

@@ -159,12 +159,16 @@ today.setHours(0, 0, 0, 0);
             {shows.map((show, index) => (
               <Link key={index} href="/events/[eventId]" as={`/events/${show.uuid_column}`}>
                 <div className={`show ${show.premium ? 'premium' : 'regular'}`}>
+                  <div className='details'>
                   <h3 className="eventTitle">{show.event_title}</h3>
-                  <h4>{show.bands}</h4>
                   <p className="listDetail"><b>Time:</b> {show.hour}:{show.minute.toString().padStart(2, '0')} {show.ampm}</p>
                   <p className="listDetail"><b>Venue:</b> {show.venue}</p>
                   <p className="listDetail"><b>Cover:</b> {show.charge}</p>
                   <p className="listDetail"><b>Genre:</b> {show.genre}</p>
+                  </div>
+                  <div className='image' style={{ backgroundImage: `url(${show.image})` }}>
+</div>
+
                 </div>
 
               </Link>

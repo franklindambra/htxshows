@@ -575,6 +575,43 @@ input[type=radio] {
   animation: spin 1s linear infinite;
 }
 
+.show {
+  display: flex;
+  align-items: center;
+}
+
+.details {
+  flex: 3;
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+  height: 200px;
+  background-size: cover;
+  background-position: center center; /* Optional: Center the image horizontally */
+}
+
+/* Apply styles above 999px viewport width */
+@media (min-width: 1000px) {
+  .details {
+    width: 75%;
+  }
+  .image {
+    width: 25%;
+  }
+}
+
+/* Apply styles below 999px viewport width */
+@media (max-width: 999px) {
+  .show {
+    display: block;
+  }
+.image{display: none;}
+
+}
+
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
