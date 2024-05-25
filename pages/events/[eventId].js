@@ -11,7 +11,7 @@ const EventDetail = () => {
   const router = useRouter();
   const { eventId } = router.query;
 
-  const baseUrl = "https://www.htxshow.com/events/";
+  const baseUrl = "https://www.htxshows.com/events/";
   const linkToCopy = `${baseUrl}${eventId}`;
 
   const [eventData, setEventData] = useState(null);
