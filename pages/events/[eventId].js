@@ -80,7 +80,7 @@ const EventDetail = () => {
 
         <meta property="og:title" content={eventData && eventData.event_title} />
         <meta property="og:description" content="Browse shows happening in Houston, Texas." />
-        <meta property="og:image" content="https://example.com/your-image.jpg" />
+        <meta property="og:image" content="https://www.htxshows.com/bgresized.jpg" />
         <meta property="og:url" content="https://www.htxshow.com/events/{eventId}" />
         <meta property="og:type" content="website" />
 
@@ -103,10 +103,11 @@ const EventDetail = () => {
               {eventData.genre && (
                 <p>Genre: {eventData.genre}</p>
               )}
-            </div>
-            {eventData.details_link && (
+                          {eventData.details_link && (
               <p><a href={eventData.details_link} rel="nofollow" target="_blank">{eventData.details_link}</a></p>
             )}
+            </div>
+
             {/* Add other event links */}
             {eventData.spotify && (
               <a href={eventData.spotify} target="_blank" rel="noopener noreferrer">
