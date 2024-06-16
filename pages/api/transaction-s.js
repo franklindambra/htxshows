@@ -2,7 +2,7 @@ import Stripe from "stripe";
 import { v4 as uuidv4 } from 'uuid'; // Import the UUID library
 import { supabase } from '../../lib/supabase';
 
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
+const stripe = new Stripe(process.env.NEXT_PUBLIC_TEST_STRIPE_SECRET_KEY);
 const host = 'https://www.htxshows.com'
 
 export default async function handler(req, res) {
@@ -34,15 +34,16 @@ export default async function handler(req, res) {
         ],
         mode: "payment",
         cancel_url: `${host}/post-show`,
-        // Include the UUID in the success URL as a query parameter
         success_url: `${host}/thank-you?uuid=${uuid}`,
       });
+
+
+      console.log(session);
 
       res.status(200).json({ sessionId: session.id });
 
 
 
-      // Insert the UUID into the shows table along with the rest of the data
       const { data, error } = await supabase.from('shows').insert([
           {
               event_title: eventTitle,

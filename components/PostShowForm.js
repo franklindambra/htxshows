@@ -151,7 +151,7 @@ const PostShowForm = (props) => {
 
       <label style={{borderRadius:"5px"}} className="premium premiumOption">
         <h3>Premium Post</h3>
-        <p>Have your post stand out in the events list for only $2</p>
+        <p>Have your post stand out in the events list for only a dollar extra.</p>
 
         <input type="radio" id="premiumYes" name="premium" value="true" checked={props.formData.premium === "true"} onChange={props.handleChange} />
         <label for="premiumYes" className="radio-label">Yes</label>
