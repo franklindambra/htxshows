@@ -13,7 +13,7 @@ export default function Home() {
 <div>
 <Head>
 
-  <title>HTX Shows - Houton's Main Event Feed</title>
+  <title>HTX Shows - Houstons Centralized Shows List</title>
   <meta name="description" content="The best website for finding shows in Houston Texas. Fitler by time, genre, AM or Pm." />
   <meta name="keywords" content="Houston, shows, events, music" />
   <meta name="robots" content="index, follow" />
