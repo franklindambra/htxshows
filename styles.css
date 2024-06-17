@@ -285,13 +285,13 @@ footer p {
 
 
 /*FILTER BAR*/
-.filter-bar-container {
-  height: 200px;
-  ;
+.filterContainer {
+  height: 100px;
+ 
 }
 
 .filter-bar {
-  margin-bottom: 20px;
+
 }
 
 .filter-bar select {

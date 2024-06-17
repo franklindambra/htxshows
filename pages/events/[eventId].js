@@ -81,7 +81,7 @@ const EventDetail = () => {
         <meta property="og:title" content={eventData && eventData.event_title} />
         <meta property="og:description" content="Browse shows happening in Houston, Texas." />
         <meta property="og:image" content="https://www.htxshows.com/bgresized.jpg" />
-        <meta property="og:url" content="https://www.htxshow.com/events/{eventId}" />
+        <meta property="og:url" content={`https://www.htxshow.com/events/${eventId}`} />
         <meta property="og:type" content="website" />
 
       </Head>

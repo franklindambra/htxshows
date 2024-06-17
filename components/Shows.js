@@ -5,16 +5,16 @@ import SEOcontent from './SEOcontent';
 import { supabase } from '../lib/supabase'
 
 const Shows = () => {
-  
+
   const [shows, setShows] = useState([]);
 
-  const [selectedGenre, setSelectedGenre] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(null);
-  const [selectedCharge, setSelectedCharge] = useState(null);
+  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedTime, setSelectedTime] = useState('');
+  const [selectedCharge, setSelectedCharge] = useState('');
   const [loading, setLoading] = useState(true); // Add loading state
 
   const today = new Date();
-today.setHours(0, 0, 0, 0);
+  today.setHours(0, 0, 0, 0);
 
 
   useEffect(() => {
@@ -22,7 +22,7 @@ today.setHours(0, 0, 0, 0);
       try {
         const { data } = await supabase.from('shows').select();
         if (data && data.length > 0) {
-          console.log('data', data);
+          //console.log('data', data);
           setShows(data);
         }
       } catch (error) {
@@ -31,7 +31,7 @@ today.setHours(0, 0, 0, 0);
         setLoading(false); // Update loading state regardless of success or failure
       }
     };
-    
+
     fetchShows();
   }, []);
 
@@ -41,10 +41,10 @@ today.setHours(0, 0, 0, 0);
 
 
   const middleColumnShows = shows.filter((show) => {
-    
-    
+
+
     const showDate = new Date(show.year, show.month - 1, show.day);
-    
+
     return (
       (!selectedGenre || show.genre === selectedGenre) &&
       (!selectedTime || show.ampm === selectedTime) &&
@@ -89,19 +89,12 @@ today.setHours(0, 0, 0, 0);
 
 
 
-  
+
 
   return (
 
     <div>
-      <div className='showsContainer'>
-        {/* Loading spinner */}
-        {loading && (
-          <div className='spinnerContainer'>
-            <div className='spinner'></div>
-          </div>
-        )}
-
+      <div className='filterContainer'>
         {/* Filter Bar */}
         <div className="filter-bar">
           <label>
@@ -150,6 +143,18 @@ today.setHours(0, 0, 0, 0);
             </select>
           </label>
         </div>
+      </div>
+
+
+      <div className='showsContainer'>
+        {/* Loading spinner */}
+        {loading && (
+          <div className='spinnerContainer'>
+            <div className='spinner'></div>
+          </div>
+        )}
+
+
 
         {/* Filtered Shows */}
         {sortedWeekdays.map(([weekday, shows]) => (
@@ -160,14 +165,14 @@ today.setHours(0, 0, 0, 0);
               <Link key={index} href="/events/[eventId]" as={`/events/${show.uuid_column}`}>
                 <div className={`show ${show.premium ? 'premium' : 'regular'}`}>
                   <div className='details'>
-                  <h3 className="eventTitle">{show.event_title}</h3>
-                  <p className="listDetail"><b>Time:</b> {show.hour}:{show.minute.toString().padStart(2, '0')} {show.ampm}</p>
-                  <p className="listDetail"><b>Venue:</b> {show.venue}</p>
-                  <p className="listDetail"><b>Cover:</b> {show.charge}</p>
-                  <p className="listDetail"><b>Genre:</b> {show.genre}</p>
+                    <h3 className="eventTitle">{show.event_title}</h3>
+                    <p className="listDetail"><b>Time:</b> {show.hour}:{show.minute.toString().padStart(2, '0')} {show.ampm}</p>
+                    <p className="listDetail"><b>Venue:</b> {show.venue}</p>
+                    <p className="listDetail"><b>Cover:</b> {show.charge}</p>
+                    <p className="listDetail"><b>Genre:</b> {show.genre}</p>
                   </div>
                   <div className='image' style={{ backgroundImage: `url(${show.image})` }}>
-</div>
+                  </div>
 
                 </div>
 
